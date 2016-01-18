@@ -1,0 +1,16 @@
+? matches a single character.
+
+* matches zero or more characters, excluding /.
+
+** matches zero or more directories in a path.
+
+The pattern "/events/**" matches "/events", "/events/", "/
+events/1", and "/events/1/form?test=1"; it does not match "/
+events123".
+
+The pattern "/events*" matches "/events", and "/events123"; it
+does not match "/events/" or "/events/1".
+
+The pattern "/events*/**" matches "/events", "/events/", "/
+events/1","/events123", "/events123/456", and "/events/1/
+form?test=1".
